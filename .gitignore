@@ -7,6 +7,9 @@ screenshots/
 # Results file (contains scraped data)
 results.json
 
+# Urls file (contains urls to scrap)
+urls.txt
+
 # Environment variables
 .env
 .env.local
