@@ -1,0 +1,6 @@
+# Lista stron do przetworzenia
+# Dodaj po jednym adresie URL w każdej linii
+# Linie zaczynające się od # są ignorowane
+
+https://example.com
+https://httpbin.org/html

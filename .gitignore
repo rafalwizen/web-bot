@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Screenshots folder (can be large)
+screenshots/
+
+# Results file (contains scraped data)
+results.json
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
