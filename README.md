@@ -122,4 +122,4 @@ MIT
 
 ## Author
 
-Created by Claude Code & Rafal Wizen
+Created by Rafał Wiżeń
