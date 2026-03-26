@@ -80,10 +80,11 @@ function generateSafeFileName(url) {
  * Scrapuje stronę: robi screenshot i szuka emaili
  * @param {string} url - adres URL
  * @param {Browser} browser - przeglądarka Puppeteer
+ * @param {number} index - numer porządkowy aktualnie przetwarzanej strony
  * @returns {Object} - wynik scrapowania {url, email, screenshot}
  */
-async function scrapePage(url, browser) {
-  console.log(`Przetwarzanie: ${url}`);
+async function scrapePage(url, browser, index) {
+  console.log(`Przetwarzanie: ${index}. ${url}`);
 
   try {
     const page = await browser.newPage();
@@ -186,8 +187,8 @@ async function main() {
 
   // Przetwarzaj każda stronę
   const results = [];
-  for (const url of urls) {
-    const result = await scrapePage(url, browser);
+  for (let i = 0; i < urls.length; i++) {
+    const result = await scrapePage(urls[i], browser, i + 1);
     results.push(result);
     // Krótka pauza między żądaniami
     await new Promise(resolve => setTimeout(resolve, 1000));
